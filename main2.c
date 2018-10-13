@@ -5,6 +5,7 @@
 #define MAX 10
 
 void modo_pvp();
+void comparar_palabras(char palabra[20], char palabra_ingresada[20]);
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int main(int argc, char *argv[]) {
@@ -81,3 +82,7 @@ return vidas;
 	
 }
 */
+void comparar_palabras(char palabra[20], char palabra_ingresada[20]);{
+	
+	
+}
