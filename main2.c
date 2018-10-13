@@ -4,6 +4,7 @@
 #include <string.h>
 #define MAX 10
 
+void modo_pvp();
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int main(int argc, char *argv[]) {
@@ -16,7 +17,7 @@ int main(int argc, char *argv[]) {
 	switch(seleccion){
 		
 		case 1: 
-		printf("Modo Jugador 	vs Jugador:\n");
+		printf("Modo Jugador vs Jugador:\n");
 		modo_pvp();
 		
 		break;
@@ -32,6 +33,7 @@ int main(int argc, char *argv[]) {
 	
 }
 void modo_pvp(){
+	int i;
 	int vidas;
 	char palabra[20];
 	char palabra_ingresada[20];
@@ -44,18 +46,26 @@ void modo_pvp(){
 	
 	longitud = strlen(palabra);
 //	printf("\nLa longitud de la palabra es: %d\n",longitud);
-	for(int i =0; i<longitud; i++){
-		printf(" * ");
-	}
+	
 	
 	do{
+		for(i =0; i<longitud; i++){
+		printf(" * ");
+	}
 		printf("Jugador 2: Ingresa una letra:");
-		for(int i=0; i<longitud;i++){
+		for(i=0; i<longitud;i++){
 			scanf("%s",&palabra_ingresada[i]);
+				if(palabra_ingresada[1] == palabra[1] || palabra_ingresada[1] == palabra[2]){
+			printf("%s",palabra[i]);
 		}
+			
+			
+		
+		}
+	
 		
 	}
-	while(vidas==0);{
+	while(vidas=!0);{
 		printf("Perdiste");
 	}
 	
